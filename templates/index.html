@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" />
+		<title>移动端API自动化测试</title>
+		<link rel="shortcut icon" href="../static/favicon.ico" />
+		<link rel="bookmark"href="../static/favicon.ico" />
+		<style>
+
+		a.button {
+			position:relative;
+			top:220px;
+			font-size:30px;
+			color:#000;
+			text-decoration:none;
+			display:block;
+			width:578px;
+			padding:10px;
+			border:1px solid #DDD;
+			text-align:center;
+
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			-o-border-radius:5px;
+			border-radius:5px;
+		}
+
+		a.button:hover {
+			color:#000;
+			border-color:#3278BE;
+			display:block;
+		}
+
+		a {
+			font-style:normal, arial, serif;
+		}
+
+		a.button {
+			-webkit-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+
+		a.text{
+			position:relative;
+			top:200px;
+		}
+
+		#cover{
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			display:none;
+			z-index:1000;
+        }
+
+		#img{
+			position:relative;
+			top:50px;
+		}
+
+		</style>
+
+	</head>
+	<body>
+		<center><h3><a class="text">移动端API自动化测试</a></h3></center>
+		<center><p><a class="text">测试环境：172.17.255.228:8080</a></p></center>
+		<!--<center><a class="text">测试环境: <select>-->
+						<!--<option>172.17.255.228:8080</option>-->
+					<!--</select></a></center>-->
+		<center><p><a class="button" href="/test">开始测试</a></p></center>
+		<center><p><a href="/report.html" class="button">测试报告</a></p></center>
+		<!--<p><a href="/new_add" class="button">新增接口</a></p>-->
+		<!--<p><a href="/list" class="button">查看接口</a></p>-->
+		<div align="center" id="cover"><img id="img" src="../static/loading.gif"/></div>
+		<script>
+			var btn=document.getElementsByClassName('button')[0];
+			btn.addEventListener('click',function(){
+				var cover=document.getElementById('cover');
+				cover.style.display='block';
+				setTimeout(function(){
+					cover.style.display='none';
+				},900000)
+			})
+		</script>
+	</body>
+</html>

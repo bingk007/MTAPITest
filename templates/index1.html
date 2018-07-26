@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" />
+		<title>移动端API自动化测试</title>
+		<link rel="shortcut icon" href="../static/favicon.ico" />
+		<link rel="bookmark"href="../static/favicon.ico" />
+		<style>
+		.container{
+			text-align: center;
+			margin-top: 100px;
+		}
+
+		a.button {
+			position:relative;
+			font-size:30px;
+			color:#000;
+			text-decoration:none;
+			display:block;
+			width:578px;
+			padding:10px;
+			border:1px solid #DDD;
+			margin: 0 auto;
+
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			-o-border-radius:5px;
+			border-radius:5px;
+		}
+
+		a.button:hover {
+			color:#000;
+			border-color:#3278BE;
+			display:block;
+		}
+
+		a {
+			font-style:normal, arial, serif;
+		}
+
+		a.button {
+			-webkit-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+
+		a.text{
+			position:relative;
+
+		}
+
+		#cover{
+
+			display: block;
+			height: 108px;
+			display: none;
+        }
+
+		#img{
+			position:relative;
+
+		}
+
+		</style>
+
+	</head>
+	<body>
+		<div class="container">
+			<div align="center" id="cover"><img id="img" src="../static/loading.gif"/></div>
+			<div><h3><a class="text">移动端API自动化测试</a></h3></div>
+
+				<center>
+					<a>测试环境:</a>
+					<select>
+						<option>172.17.255.228:8080</option>
+						<option>172.17.255.220:8080</option>
+					</select>
+				</center>
+
+			<div><p><a class="button" href="/test" id="statTest">开始测试</a></p></div>
+			<div><p><a href="/report.html" class="button" id="testReport">测试报告</a></p></div>
+		</div>
+		<!--<p><a href="/new_add" class="button">新增接口</a></p>-->
+		<!--<p><a href="/list" class="button">查看接口</a></p>-->
+		<script>
+			var btn=document.getElementsByClassName('button')[0];
+			btn.addEventListener('click',function(){
+				var cover=document.getElementById('cover');
+				cover.style.display='block';
+				setTimeout(function(){
+					cover.style.display='none';
+				},900000)
+			})
+		</script>
+	</body>
+</html>
