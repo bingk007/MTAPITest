@@ -8,8 +8,8 @@ import json
 import ssl
 
 ssl._create_default_https_context = ssl._create_unverified_context
-app_id = '1106928785'
-app_key = 'P91kIX69bqUU01tw'
+app_id = ''
+app_key = ''
 
 
 def ocr(image):
